@@ -1,0 +1,5 @@
+; Ce fichier sert de gabarit au fichier config.ini. Il faut le dupliquer et le renommer en config.ini et remplir les différents champs pour se connecter à la BDD.
+DB_HOST=
+DB_NAME=
+DB_USERNAME=
+DB_PASSWORD=

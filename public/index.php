@@ -41,6 +41,50 @@ $router->map(
     'search'
 );
 
+// Route pour la page de détail d'un film
+$router->map(
+    'GET',
+    '/movie/[i:id]',
+    [
+        'controller' => 'MainController',
+        'method' => 'movieAction'
+    ],
+    'movie'
+);
+
+// BONUS 2 : Route pour afficher tous les films d'un réalisateur
+$router->map(
+    'GET',
+    '/director/[i:id]',
+    [
+        'controller' => 'MainController',
+        'method' => 'directorAction'
+    ],
+    'director'
+);
+
+// BONUS 2 : Route pour afficher tous les films d'un compositeur
+$router->map(
+    'GET',
+    '/composer/[i:id]',
+    [
+        'controller' => 'MainController',
+        'method' => 'composerAction'
+    ],
+    'composer'
+);
+
+// BONUS 2 : Route pour afficher tous les films d'un acteur
+$router->map(
+    'GET',
+    '/actor/[i:id]',
+    [
+        'controller' => 'MainController',
+        'method' => 'actorAction'
+    ],
+    'actor'
+);
+
 
 // La méthode match permet à AltoRouter de savoir si la page demandée existe dans la liste des routes
 // $match contient un tableau avec les informations de la route actuelle (controller, méthode, nom, etc)
